@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    container_name: library_db
+    expose:
+      - 5432
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./.env
+    volumes:
+      - ./data:/var/lib/postgresql/data
