@@ -1,0 +1,11 @@
+/api:
+  get:
+    description: Describe this route
+    summary: Describe this route
+    type: object
+    properties:
+      name:
+        type: string
+        example: example
+    responses:
+      

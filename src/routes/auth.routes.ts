@@ -16,3 +16,59 @@ export class AuthRouter {
         this.router.post('/register', validatorCreateUserMiddleware, this.authController.register);
     }
 }
+
+/**
+    * @swagger
+    * /auth/login:
+    *   post:
+    *       summary: login user
+    *       description: login user with email and password
+    *       requestBody:
+    *           required: true
+    *           type: json
+    *           example:
+    *           content:
+    *               application/json:
+    *                   schema:
+    *                       type: object
+    *                       properties:
+    *                           email:
+    *                               type: string
+    *                           password:
+    *                               type: string
+    *       responses:
+    *           '200':
+    *               description: OK
+    *           '500':
+    *               description: Not Authentication
+    *           '404':
+    *               description: Not Found
+    
+*/
+/**
+    * @swagger
+    * /auth/register:
+    *   post:
+    *       summary: register user
+    *       description: register user with email and password
+    *       requestBody:
+    *           required: true
+    *           type: json
+    *           example:
+    *           content:
+    *               application/json:
+    *                   schema:
+    *                       type: object
+    *                       properties:
+    *                           name:
+    *                               type: string
+    *                           email:
+    *                               type: string
+    *                           password:
+    *                               type: string
+    *       responses:
+    *           '200':
+    *               description: Register Successfull
+    *           '500':
+    *               description: Error in register user
+ */

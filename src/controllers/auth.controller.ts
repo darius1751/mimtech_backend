@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { AuthService } from "../services/auth.service";
-import { CreateUserDAO } from "../models/dao/create/create-user.dao";
 
 export class AuthController {
     private authService: AuthService;
@@ -18,9 +17,9 @@ export class AuthController {
             res.status(500).json(error);
         }
     }
-
     async login(req: Request, res: Response) {
         try {
+            console.log("Ok")
             const user = await this.authService.login(req.body);
             res.json(user);
         } catch (error) {
